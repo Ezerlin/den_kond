@@ -3,40 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ремонт кондиционеров</title>
+  <title>Ремонт кондиционеров — Денис</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    .services li {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .services img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .quiz-step {
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: block;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .review {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Ремонт и обслуживание кондиционеров</h1>
-    <p>Екатеринбург и до 100 км. Круглосуточно. Тел: <a href="tel:+79221300073">+7 922 130 0073</a></p>
-  </header>
-  <main>
+  <div class="container">
+    <header>
+      <h1>Ремонт и обслуживание кондиционеров</h1>
+      <p><strong>Денис</strong> — частный мастер с опытом 5+ лет. Работаю без выходных, приеду в любое время суток. Все запчасти и фреон — в машине.</p>
+      <p><strong>Екатеринбург и до 100 км. Круглосуточно.</strong></p>
+    </header>
+
     <section>
       <h2>Услуги</h2>
       <ul class="services">
-        <li><img src="img/icons/clean.svg" alt=""> Чистка — от 1500₽</li>
-        <li><img src="img/icons/freon.svg" alt=""> Заправка фреоном — от 1200₽</li>
-        <li><img src="img/icons/repair.svg" alt=""> Ремонт — диагностика, пайка, замены</li>
+        <li><img src="img/icons/clean.svg" alt="Чистка"> Чистка — от 1500 ₽</li>
+        <li><img src="img/icons/freon.svg" alt="Фреон"> Заправка фреоном — от 1200 ₽</li>
+        <li><img src="img/icons/repair.svg" alt="Ремонт"> Ремонт любой сложности</li>
       </ul>
     </section>
+
     <section>
-      <h2>Отзывы</h2>
-      <div class="review">
-        <img src="img/avatars/user1.png" alt="">
-        <p>Спасибо мастеру! Приехал в 7 утра, всё починил, кондиционер как новый. — Ирина, Берёзовский</p>
-      </div>
-      <div class="review">
-        <img src="img/avatars/user2.png" alt="">
-        <p>Денису респект. Приехал ночью, заправил и промыл. Работает отлично. — Артём, Екатеринбург</p>
+      <h2>Квиз — 3 вопроса и готово</h2>
+      <div id="quiz">
+        <div class="quiz-step active" data-step="1">
+          <p><strong>1. Что вам нужно?</strong></p>
+          <button onclick="nextStep(2)">Установка</button>
+          <button onclick="nextStep(2)">Обслуживание</button>
+          <button onclick="nextStep(2)">Ремонт</button>
+        </div>
+        <div class="quiz-step" data-step="2">
+          <p><strong>2. Насколько срочно?</strong></p>
+          <button onclick="nextStep(3)">Сегодня</button>
+          <button onclick="nextStep(3)">В течение 2 дней</button>
+          <button onclick="nextStep(3)">Просто консультируюсь</button>
+        </div>
+        <div class="quiz-step" data-step="3">
+          <p><strong>3. Удобный способ связи?</strong></p>
+          <a class="cta" href="https://wa.me/79221300073" target="_blank">WhatsApp</a>
+          <a class="cta" href="https://t.me/79221300073" target="_blank">Telegram</a>
+        </div>
       </div>
     </section>
+
     <section>
-      <h2>Обратная связь</h2>
-      <p><a href="https://t.me/+79221300073">Телеграм</a> | <a href="https://wa.me/79221300073">WhatsApp</a></p>
+      <h2>Отзывы — Екатеринбург и пригороды</h2>
+      <div class="review"><strong>Анна, Екатеринбург:</strong><br>Приехал вечером, всё почистил, запах исчез. Очень довольна!</div>
+      <div class="review"><strong>Игорь, Верхняя Пышма:</strong><br>Быстрая заправка фреоном, отличный сервис. Спасибо!</div>
+      <div class="review"><strong>Мария, Арамиль:</strong><br>Работает даже ночью! Починил дренаж — всё отлично.</div>
     </section>
-  </main>
-  <footer>© Денис, 2025</footer>
+
+    <section>
+      <h2>Контакты</h2>
+      <p>Пишите или звоните: <strong>+7 922 130-00-73</strong></p>
+      <a class="cta" href="https://wa.me/79221300073" target="_blank">WhatsApp</a>
+      <a class="cta" href="https://t.me/79221300073" target="_blank">Telegram</a>
+    </section>
+
+    <footer>
+      © 2025 Денис — ремонт кондиционеров в Екатеринбурге
+    </footer>
+  </div>
+
+  <script>
+    function nextStep(step) {
+      document.querySelectorAll(".quiz-step").forEach(el => el.classList.remove("active"));
+      document.querySelector(`.quiz-step[data-step="${step}"]`).classList.add("active");
+    }
+  </script>
 </body>
 </html>
