@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+header, footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+main { padding: 1em; }
+.services li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+.services img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.review {
+  background: white;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 8px;
+  display: flex;
+  gap: 1em;
+}
+.review img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
